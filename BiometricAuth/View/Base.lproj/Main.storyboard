@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Auth View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="AuthViewControllerId" id="BYZ-38-t0r" customClass="AuthViewController" customModule="BiometricAuth" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_lock" translatesAutoresizingMaskIntoConstraints="NO" id="TTp-eF-UdM">
+                                <rect key="frame" x="96.666666666666686" y="326" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="JFh-5U-cwT"/>
+                                    <constraint firstAttribute="height" constant="200" id="jFD-OC-vXF"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SECURE NOTES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MyI-7E-rA6">
+                                <rect key="frame" x="117" y="556" width="159" height="26"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAR-ta-bCh">
+                                <rect key="frame" x="136.66666666666666" y="612" width="119.99999999999997" height="32.333333333333371"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="hf9-vJ-Pui"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="UNLOCK">
+                                    <fontDescription key="titleFontDescription" name="Futura-Bold" family="Futura" pointSize="14"/>
+                                    <color key="baseForegroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnUnlockTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ER3-0M-Z37"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TTp-eF-UdM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Rqs-ia-1LK"/>
+                            <constraint firstItem="MyI-7E-rA6" firstAttribute="top" secondItem="TTp-eF-UdM" secondAttribute="bottom" constant="30" id="YWx-6M-PaW"/>
+                            <constraint firstItem="BAR-ta-bCh" firstAttribute="top" secondItem="MyI-7E-rA6" secondAttribute="bottom" constant="30" id="dZI-JW-CL2"/>
+                            <constraint firstItem="TTp-eF-UdM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="evG-Pr-7Sk"/>
+                            <constraint firstItem="MyI-7E-rA6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rkz-OW-rhv"/>
+                            <constraint firstItem="BAR-ta-bCh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zxB-MP-VDZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="unlockBtn" destination="BAR-ta-bCh" id="zmP-2z-tXD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4" y="4"/>
+        </scene>
+        <!--Notes View Controller-->
+        <scene sceneID="Sf9-dg-E06">
+            <objects>
+                <viewController storyboardIdentifier="NotesViewControllerId" id="N17-3L-RGJ" customClass="NotesViewController" customModule="BiometricAuth" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="I6o-h5-CRZ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Secure Note" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXh-nH-yrA">
+                                <rect key="frame" x="98" y="283.66666666666669" width="197" height="27.333333333333314"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="21"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vhd-AB-cxz">
+                                <rect key="frame" x="146.66666666666666" y="531" width="100" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="VUA-Hq-DV8"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="SAVE">
+                                    <fontDescription key="titleFontDescription" name="Futura-Bold" family="Futura" pointSize="14"/>
+                                    <color key="baseForegroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnSaveTapped:" destination="N17-3L-RGJ" eventType="touchUpInside" id="YRm-uG-P7N"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" text="My secure note..." translatesAutoresizingMaskIntoConstraints="NO" id="CHA-fi-QQC">
+                                <rect key="frame" x="30" y="351" width="333" height="150"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="1gO-2w-Vgu"/>
+                                </constraints>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ivo-Mi-Uex"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CHA-fi-QQC" firstAttribute="top" secondItem="hXh-nH-yrA" secondAttribute="bottom" constant="40" id="0an-Eg-CzO"/>
+                            <constraint firstItem="hXh-nH-yrA" firstAttribute="centerX" secondItem="I6o-h5-CRZ" secondAttribute="centerX" id="PZC-La-lmG"/>
+                            <constraint firstItem="CHA-fi-QQC" firstAttribute="centerX" secondItem="I6o-h5-CRZ" secondAttribute="centerX" id="bFC-v4-GbZ"/>
+                            <constraint firstItem="ivo-Mi-Uex" firstAttribute="trailing" secondItem="CHA-fi-QQC" secondAttribute="trailing" constant="30" id="ek1-pc-5j3"/>
+                            <constraint firstItem="CHA-fi-QQC" firstAttribute="leading" secondItem="ivo-Mi-Uex" secondAttribute="leading" constant="30" id="iRG-Yx-5ru"/>
+                            <constraint firstItem="Vhd-AB-cxz" firstAttribute="top" secondItem="CHA-fi-QQC" secondAttribute="bottom" constant="30" id="jT5-aC-xFI"/>
+                            <constraint firstItem="Vhd-AB-cxz" firstAttribute="centerX" secondItem="I6o-h5-CRZ" secondAttribute="centerX" id="mrN-dU-ywx"/>
+                            <constraint firstItem="CHA-fi-QQC" firstAttribute="centerY" secondItem="I6o-h5-CRZ" secondAttribute="centerY" id="o45-0W-L5X"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="txtView" destination="CHA-fi-QQC" id="SHY-VH-wbI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gep-g1-t5O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="851" y="-1"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_lock" width="743" height="1080"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
