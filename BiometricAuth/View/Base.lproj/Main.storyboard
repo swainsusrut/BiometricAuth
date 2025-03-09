@@ -25,13 +25,37 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SECURE NOTES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MyI-7E-rA6">
-                                <rect key="frame" x="117" y="556" width="159" height="26"/>
+                                <rect key="frame" x="117" y="546" width="159" height="26"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YG1-3P-FFX">
+                                <rect key="frame" x="152.66666666666666" y="742.33333333333337" width="88" height="19"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Use Password">
+                                        <attributes>
+                                            <color key="NSColor" red="0.83011400699615479" green="0.34487593173980713" blue="0.90712964534759521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="14" name="Futura-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <integer key="NSUnderline" value="1"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter User Id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="esP-aP-PfK">
+                                <rect key="frame" x="30" y="592" width="333" height="34"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F1f-Jt-wl6">
+                                <rect key="frame" x="30" y="636" width="333" height="34"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAR-ta-bCh">
-                                <rect key="frame" x="136.66666666666666" y="612" width="119.99999999999997" height="32.333333333333371"/>
+                                <rect key="frame" x="136.66666666666666" y="690" width="119.99999999999997" height="32.333333333333371"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="hf9-vJ-Pui"/>
                                 </constraints>
@@ -49,16 +73,29 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="esP-aP-PfK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3u3-US-psx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="esP-aP-PfK" secondAttribute="trailing" constant="30" id="4cN-VK-A31"/>
+                            <constraint firstItem="F1f-Jt-wl6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="CtZ-1D-Ccj"/>
                             <constraint firstItem="TTp-eF-UdM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Rqs-ia-1LK"/>
-                            <constraint firstItem="MyI-7E-rA6" firstAttribute="top" secondItem="TTp-eF-UdM" secondAttribute="bottom" constant="30" id="YWx-6M-PaW"/>
-                            <constraint firstItem="BAR-ta-bCh" firstAttribute="top" secondItem="MyI-7E-rA6" secondAttribute="bottom" constant="30" id="dZI-JW-CL2"/>
+                            <constraint firstItem="YG1-3P-FFX" firstAttribute="top" secondItem="BAR-ta-bCh" secondAttribute="bottom" constant="20" id="Ti7-sV-ynr"/>
+                            <constraint firstItem="BAR-ta-bCh" firstAttribute="top" secondItem="F1f-Jt-wl6" secondAttribute="bottom" constant="20" id="Xqu-5y-v7k"/>
+                            <constraint firstItem="MyI-7E-rA6" firstAttribute="top" secondItem="TTp-eF-UdM" secondAttribute="bottom" constant="20" id="YWx-6M-PaW"/>
                             <constraint firstItem="TTp-eF-UdM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="evG-Pr-7Sk"/>
+                            <constraint firstItem="F1f-Jt-wl6" firstAttribute="top" secondItem="esP-aP-PfK" secondAttribute="bottom" constant="10" id="fcF-WK-fSQ"/>
+                            <constraint firstItem="YG1-3P-FFX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gmE-DU-LtL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F1f-Jt-wl6" secondAttribute="trailing" constant="30" id="kIU-43-Q67"/>
+                            <constraint firstItem="F1f-Jt-wl6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nnj-2M-qPu"/>
+                            <constraint firstItem="esP-aP-PfK" firstAttribute="top" secondItem="MyI-7E-rA6" secondAttribute="bottom" constant="20" id="qmo-rl-1b1"/>
                             <constraint firstItem="MyI-7E-rA6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rkz-OW-rhv"/>
+                            <constraint firstItem="esP-aP-PfK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="uPP-x4-3dV"/>
                             <constraint firstItem="BAR-ta-bCh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zxB-MP-VDZ"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="lblUsePassword" destination="YG1-3P-FFX" id="0w8-dD-KLh"/>
+                        <outlet property="passwordTextField" destination="F1f-Jt-wl6" id="cZO-d1-vfz"/>
                         <outlet property="unlockBtn" destination="BAR-ta-bCh" id="zmP-2z-tXD"/>
+                        <outlet property="userNameTextField" destination="esP-aP-PfK" id="nId-G3-S3i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
